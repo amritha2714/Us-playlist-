@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+
+  /* Hearts wallpaper */
+  background-color: pink;
+  background-image: url("https://www.transparenttextures.com/patterns/hearts.png");
+  background-size: cover;
+  height: 100vh;
+}
+
+/* Center Button */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Love Button */
+.love-btn {
+  font-size: 28px;
+  padding: 20px 50px;
+  border: none;
+  border-radius: 50px;
+  background: red;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.love-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Playlist Title */
+.title {
+  margin-top: 40px;
+  font-size: 35px;
+  color: darkred;
+}
+
+/* Spotify Box */
+.spotify-box {
+  width: 80%;
+  max-width: 500px;
+  margin: 40px auto;
+}
