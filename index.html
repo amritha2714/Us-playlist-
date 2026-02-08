@@ -2,21 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>I Love You😚</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <h1 class="main-title">Hey Love💖!</h1>
+
   <div class="center">
-    <button class="love-btn" onclick="goToPlaylist()">
-      I Love You😚
-    </button>
+    <button class="love-btn" onclick="goToPlaylist()">I Love You 😚</button>
   </div>
 
   <script>
     function goToPlaylist() {
-      window.location.href = "playlist.html"; // Make sure this file exists exactly
+      window.location.href = "playlist.html";
     }
+
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerText = "❤️";
+
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = Math.random() * 20 + 20 + "px"; // bigger hearts
+      heart.style.animationDuration = Math.random() * 3 + 4 + "s";
+
+      document.body.appendChild(heart);
+
+      setTimeout(() => heart.remove(), 6000);
+    }
+
+    setInterval(createHeart, 120); // more hearts
   </script>
 
 </body>
