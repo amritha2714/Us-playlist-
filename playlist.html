@@ -2,21 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>just us❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>for my shuttu😌❤️</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1 class="title">for my shutt😌❤️</h1>
+  <h1 class="main-title">🎶 Our Love Playlist 🎶</h1>
 
   <div class="spotify-box">
     <iframe style="border-radius:12px"
       src="https://open.spotify.com/embed/playlist/03GGv9tKzZxFRrjNG3l6uE"
-      width="100%" height="380"
+      width="90%" height="450"
       frameborder="0"
       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
     </iframe>
   </div>
+
+  <button class="love-btn" onclick="window.location.href='index.html'">⬅ Back</button>
+
+  <script>
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerText = "❤️";
+
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = Math.random() * 20 + 20 + "px";
+      heart.style.animationDuration = Math.random() * 3 + 4 + "s";
+
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 6000);
+    }
+
+    setInterval(createHeart, 120);
+  </script>
 
 </body>
 </html>
